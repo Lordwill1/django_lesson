@@ -1,7 +1,18 @@
-{% load static %}
+<!-- {% load static %}
 
-<link rel="stylesheet" href="{% static 'style.css' %}">
+<!-- <link rel="stylesheet" href="{% static 'style.css' %}">
 
-<h1>Welcome from the html file test 2</h1>
+<h1>Welcome from the html file test 2</h1> -->
 
-<h2> Welcome back {{ var }}</h2>
+<h2> Word Counter </h2>
+
+
+<form action="" method="POST">
+    {% csrf_token %}
+
+    <label>Input a sentence: </label>
+    <textarea type="text" name="sentence"></textarea>
+    <input type="submit" />
+</form>
+
+<h1>The amount of words in that sentence is {{ amount_of_words}}</h1>
